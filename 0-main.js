@@ -35,7 +35,7 @@ await client.init({
 // 11. Check if Pinecone index exists and create if necessary
   await createPineconeIndex(client, indexName, vectorDimension);
 // 12. Update Pinecone vector store with document embeddings
-  // await updatePinecone(client, indexName, docs);
+  await updatePinecone(client, indexName, docs);
 // 13. Query Pinecone vector store and GPT model for an answer
   await queryPineconeVectorStoreAndQueryLLM(client, indexName, question);
 })();
